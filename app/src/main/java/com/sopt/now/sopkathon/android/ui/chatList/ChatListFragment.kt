@@ -24,7 +24,12 @@ class ChatListFragment :
 
     private fun initAdapterWithClickListener() {
         _adapter = ChatListAdapter { friendModel ->
-            val nickname = friendModel.nickname
+
+            val action =
+                ChatListFragmentDirections.actionFragmentChatListToSendChatFragment()
+            findNavController().navigate(action)
+
+//            val nickname = friendModel.nickname
 //            if (friendModel.isList) {
 //                val action =
 //                    ChatListFragmentDirections.actionFragmentChatListToSendQuestionFragment(nickname)

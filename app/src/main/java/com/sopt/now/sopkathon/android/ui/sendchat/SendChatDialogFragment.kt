@@ -3,6 +3,7 @@ package com.sopt.now.sopkathon.android.ui.sendchat
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
+import android.widget.TextView
 import com.sopt.now.sopkathon.android.R
 import com.sopt.now.sopkathon.android.databinding.FragmentSendChatDialogBinding
 import com.sopt.now.sopkathon.android.ui.common.base.BaseDialog
@@ -32,5 +33,8 @@ class SendChatDialogFragment :
         }
     }
 
+    fun updateTimer(secondsLeft: Int) {
+        view?.findViewById<TextView>(R.id.tv_send_title)?.text = "${secondsLeft}초 뒤에 채팅이 사라져요"
+    }
 
 }
