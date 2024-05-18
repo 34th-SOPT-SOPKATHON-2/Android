@@ -34,11 +34,20 @@
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/bg_gray_radius_14"
-        android:backgroundTint="#B3B3B3"
+        android:background="@drawable/bg_green_radius_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_bottom_sheet_title" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_sheet_first"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_send_question_sad"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom_sheet_first"
+        app:layout_constraintStart_toStartOf="@id/view_bottom_sheet_first"
+        app:layout_constraintTop_toTopOf="@id/view_bottom_sheet_first"/>
 
     <TextView
         android:id="@+id/tv_bottom_sheet_first"
@@ -49,7 +58,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/view_bottom_sheet_first"
-        app:layout_constraintStart_toStartOf="@id/view_bottom_sheet_first"
+        app:layout_constraintStart_toEndOf="@id/iv_bottom_sheet_first"
         app:layout_constraintTop_toTopOf="@id/view_bottom_sheet_first"
         tools:text="답변1" />
 
@@ -58,11 +67,20 @@
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/bg_gray_radius_14"
-        android:backgroundTint="#B3B3B3"
+        android:background="@drawable/bg_green_radius_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_bottom_sheet_first" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_sheet_second"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_send_question_sad"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom_sheet_second"
+        app:layout_constraintStart_toStartOf="@id/view_bottom_sheet_second"
+        app:layout_constraintTop_toTopOf="@id/view_bottom_sheet_second" />
 
     <TextView
         android:id="@+id/tv_bottom_sheet_second"
@@ -73,7 +91,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/view_bottom_sheet_second"
-        app:layout_constraintStart_toStartOf="@id/view_bottom_sheet_second"
+        app:layout_constraintStart_toEndOf="@id/iv_bottom_sheet_second"
         app:layout_constraintTop_toTopOf="@id/view_bottom_sheet_second"
         tools:text="답변2" />
 
@@ -82,11 +100,20 @@
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/bg_gray_radius_14"
-        android:backgroundTint="#B3B3B3"
+        android:background="@drawable/bg_green_radius_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_bottom_sheet_second" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_sheet_third"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_send_question_sad"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom_sheet_third"
+        app:layout_constraintStart_toStartOf="@id/view_bottom_sheet_third"
+        app:layout_constraintTop_toTopOf="@id/view_bottom_sheet_third" />
 
     <TextView
         android:id="@+id/tv_bottom_sheet_third"
@@ -97,7 +124,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/view_bottom_sheet_third"
-        app:layout_constraintStart_toStartOf="@id/view_bottom_sheet_third"
+        app:layout_constraintStart_toEndOf="@id/iv_bottom_sheet_third"
         app:layout_constraintTop_toTopOf="@id/view_bottom_sheet_third"
         tools:text="답변3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

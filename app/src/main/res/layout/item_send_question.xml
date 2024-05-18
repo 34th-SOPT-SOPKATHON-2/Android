@@ -5,37 +5,33 @@
     android:layout_width="102dp"
     android:layout_height="102dp">
 
-    <View
+    <androidx.cardview.widget.CardView
         android:id="@+id/view_send_question_item"
         android:layout_width="82dp"
         android:layout_height="82dp"
-        android:background="@drawable/bg_gray_radius_14"
+        app:cardCornerRadius="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/iv_send_question_item"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@id/view_send_question_item"
-        app:layout_constraintStart_toStartOf="@id/view_send_question_item"
-        app:layout_constraintTop_toTopOf="@id/view_send_question_item"
-        tools:src="@color/black" />
+        <ImageView
+            android:id="@+id/iv_send_question_item"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            tools:src="@color/black" />
 
-    <TextView
-        android:id="@+id/tv_send_question_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/pretendard_medium"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@id/view_send_question_item"
-        app:layout_constraintStart_toStartOf="@id/view_send_question_item"
-        app:layout_constraintTop_toBottomOf="@id/iv_send_question_item"
-        tools:text="텍스트" />
-
+        <TextView
+            android:id="@+id/tv_send_question_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            tools:text="텍스트" />
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
