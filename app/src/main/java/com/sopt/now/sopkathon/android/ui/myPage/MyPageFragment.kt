@@ -18,6 +18,7 @@ class MyPageFragment : BindingFragment<FragmentMyPageBinding>(R.layout.fragment_
         binding.tvMyPageName.text = myPageViewModel.profile.value?.name
         binding.tvMyPageTagTitle.text =
             getString(R.string.my_page_tag_title).format(myPageViewModel.profile.value?.name)
+        binding.tvMyPageTotalZero.text= getString(R.string.my_page_total_zero).format(150)
     }
 
     private fun initAdapter() {
