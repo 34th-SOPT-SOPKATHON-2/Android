@@ -10,7 +10,7 @@
 |<img src="https://avatars.githubusercontent.com/u/127238018?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/128459613?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/75840431?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/112953135?v=4" width="150" />| 
 |:---------:|:---------:|:---------:|:---------:|
 |[👑최준서](https://github.com/junseo511)|[이유빈](https://github.com/leeeyubin)|[김명석](https://github.com/cacaocoffee)|[이석찬](https://github.com/leeseokchan00)|
-| `navigation` | `미정` | `미정` | `미정`|
+| `네비게이션`</br>`수신자`</br>`푸쉬알림` | `채팅목록`</br>`발신자` | `친구목록`</br>`마이페이지` | `스플래쉬`</br>`회원가입`|
 </br>
 
 ## 💻 Code Convention
@@ -24,6 +24,7 @@
 - remove : 필요없는 파일, 코드를 삭제
 - chore : 기타 변경사항 (build.gradle, AndroidManifest, .gitignore 등)
 - mod: 간단한 수정사항(코드 리뷰 반영 → 로직이 많이 변경될 시 feat으로 커밋하기)
+- build: 빌드 업무 수정, 패키지 메니저 수정
 </br>
 
 ## 🔖 Branch Strategy
