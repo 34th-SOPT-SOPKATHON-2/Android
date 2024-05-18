@@ -1,6 +1,7 @@
 package com.sopt.now.sopkathon.android.data.remote.service
 
 import com.sopt.now.sopkathon.android.data.remote.request.QuestionResponse
+import com.sopt.now.sopkathon.android.data.remote.response.ChatResponse
 import com.sopt.now.sopkathon.android.data.remote.response.MyInfoResponse
 import retrofit2.Response
 import retrofit2.http.GET
@@ -16,4 +17,10 @@ interface NaniseoService {
     suspend fun getMyInfo(
         @Path("memberId") memberId: Int
     ): Response<MyInfoResponse>
+
+    @GET("api/v1/chat-list")
+    suspend fun getChatInfo(
+        @Path("memberId") memberId: Int
+    ): Response<ChatResponse>
+
 }
