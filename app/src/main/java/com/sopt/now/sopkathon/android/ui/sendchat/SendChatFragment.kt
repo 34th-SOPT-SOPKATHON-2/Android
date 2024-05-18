@@ -11,9 +11,16 @@ import com.sopt.now.sopkathon.android.ui.common.base.BindingFragment
 class SendChatFragment :
     BindingFragment<FragmentSendChatBinding>(R.layout.fragment_send_chat) {
 
+    private var deleteDialog: SendChatDialogFragment? = null
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
+        deleteDialog = SendChatDialogFragment()
+        deleteDialog?.show(childFragmentManager, deleteDialog?.tag)
         getNickname()
     }
 
