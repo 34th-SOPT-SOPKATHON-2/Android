@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_set_nickname"
-        android:name="com.sopt.now.sopkathon.android.ui.setNickName.SetNickNameFragment"
+        android:name="com.sopt.now.sopkathon.android.ui.setNickname.SetNickNameFragment"
         android:label="fragment_set_nickname">
         <action
             android:id="@+id/action_fragment_set_nickname_to_fragment_friend_list"
