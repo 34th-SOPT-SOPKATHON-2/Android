@@ -10,7 +10,8 @@
         android:label="fragment_splash:">
         <action
             android:id="@+id/action_fragment_splash_to_fragment_friend_list"
-            app:destination="@id/fragment_friend_list" />
+            app:destination="@id/fragment_friend_list"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/fragment_friend_list"
