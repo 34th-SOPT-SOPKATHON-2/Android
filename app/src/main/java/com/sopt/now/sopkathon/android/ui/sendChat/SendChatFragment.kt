@@ -1,4 +1,4 @@
-package com.sopt.now.sopkathon.android.ui.sendchat
+package com.sopt.now.sopkathon.android.ui.sendChat
 
 import android.os.Bundle
 import android.view.View
@@ -8,6 +8,7 @@ import com.sopt.now.sopkathon.android.R
 import com.sopt.now.sopkathon.android.databinding.FragmentSendChatBinding
 import com.sopt.now.sopkathon.android.ui.chatList.ChatListFragmentArgs
 import com.sopt.now.sopkathon.android.ui.common.base.BindingFragment
+import com.sopt.now.sopkathon.android.ui.sendchat.SendChatDialogFragment
 import kotlinx.coroutines.*
 
 class SendChatFragment :

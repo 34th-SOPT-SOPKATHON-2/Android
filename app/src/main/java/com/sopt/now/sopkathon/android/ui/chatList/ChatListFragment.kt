@@ -26,7 +26,7 @@ class ChatListFragment :
         _adapter = ChatListAdapter { friendModel ->
 
             val action =
-                ChatListFragmentDirections.actionFragmentChatListToSendChatFragment()
+                ChatListFragmentDirections.actionFragmentChatListToFragmentSendChat()
             findNavController().navigate(action)
 
 //            val nickname = friendModel.nickname
@@ -41,5 +41,4 @@ class ChatListFragment :
         binding.rvChatList.adapter = adapter
         adapter.setFriendList(chatListViewModel.mockFriendInfoLists)
     }
-
 }

@@ -1,16 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.sendquestion.SendQuestionFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/iv_send_question_profile"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="@id/view_send_question_description"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_send_question_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_send_question_profile"
+            app:layout_constraintStart_toEndOf="@id/iv_send_question_profile"
+            app:layout_constraintTop_toTopOf="@id/iv_send_question_profile"
+            tools:text="상대 닉네임" />
+
+        <View
+            android:id="@+id/view_send_question_description"
+            android:layout_width="320dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_gray_radius_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_send_question_profile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="#E4E4E4"
+            app:layout_constraintBottom_toBottomOf="@id/view_send_question_description"
+            app:layout_constraintStart_toStartOf="@id/view_send_question_description"
+            app:layout_constraintTop_toTopOf="@id/view_send_question_description"
+            tools:text="난 이런게 서운했어.." />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_send_question"
+            android:layout_width="306dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="24dp"
+            app:layoutManager="GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_send_question_description"
+            app:spanCount="3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
