@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_friend_profile"
+        android:layout_width="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/btn_friend_first"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_friend_profile"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/image_circle" />
+
+        <TextView
+            android:id="@+id/tv_friend_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text=" 닉네임"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_friend_profile"
+            app:layout_constraintStart_toEndOf="@id/iv_friend_profile"
+            app:layout_constraintTop_toTopOf="@id/iv_friend_profile" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_more_info"
+            app:layout_constraintBottom_toBottomOf="@id/tv_friend_nickname"
+            app:layout_constraintStart_toEndOf="@id/tv_friend_nickname"
+            app:layout_constraintTop_toTopOf="@id/tv_friend_nickname" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_friend_profile_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_friend_profile">
+
+        <TextView
+            android:id="@+id/tv_friend_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_radius_10dp"
+            android:backgroundTint="@color/material_dynamic_neutral80"
+            android:fontFamily="@font/pretendard_medium"
+            android:padding="10dp"
+            android:text="test"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btn_friend_first"
+        android:layout_width="48dp"
+        android:layout_height="0dp"
+        android:paddingVertical="3dp"
+        android:src="@drawable/ic_chat"
+        app:layout_constraintBottom_toBottomOf="@id/btn_friend_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_friend_profile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

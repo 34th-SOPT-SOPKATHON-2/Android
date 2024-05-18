@@ -7,4 +7,13 @@
     <string name="adapter_not_initialized_error_msg">Adapter is not initialized</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--friend-->
+    <string name="friend_profile">나와 총 %d 건의 0을 해소한 사이</string>
+    <string name="friend_list_title">친구목록</string>
+
+    <!--myPage-->
+    <string name="my_page_title">마이페이지</string>
+    <string name="my_page_total_zero">지금까지 총 0 %d건을 터트리셨어요!</string>
+    <string name="my_page_tag_title">%s님이 가진 태그</string>
 </resources>
