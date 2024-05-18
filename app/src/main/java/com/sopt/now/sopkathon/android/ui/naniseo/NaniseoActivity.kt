@@ -10,7 +10,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.sopt.now.sopkathon.android.R
 import com.sopt.now.sopkathon.android.databinding.ActivityNaniseoBinding
 import com.sopt.now.sopkathon.android.ui.common.base.BindingActivity
-import com.sopt.now.sopkathon.android.ui.model.BottomNavItems
+import com.sopt.now.sopkathon.android.ui.model.BeginFragmentItems
 
 class NaniseoActivity : BindingActivity<ActivityNaniseoBinding>(R.layout.activity_naniseo) {
 
@@ -42,7 +42,7 @@ class NaniseoActivity : BindingActivity<ActivityNaniseoBinding>(R.layout.activit
     }
 
     private fun changeVisibilityOfBottomNav(destination: NavDestination) {
-        if (destination.id in BottomNavItems.bottomNavItems) {
+        if (destination.id !in BeginFragmentItems.beginFragmentItems) {
             binding.bnvNaniseo.visibility = View.VISIBLE
         } else {
             binding.bnvNaniseo.visibility = View.GONE
