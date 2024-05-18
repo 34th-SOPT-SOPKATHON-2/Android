@@ -31,6 +31,10 @@ class SendQuestionAdapter(private val onClick: (String) -> (Unit)) :
                 }
                 tvSendQuestionItem.text = item.category
 
+                ivSendQuestionItem.load(item.icon)
+
+                viewSendQuestionItem.setCardBackgroundColor(android.graphics.Color.parseColor(item.hash))
+
                 root.setOnClickListener {
                     onClick(item.category)
                 }
