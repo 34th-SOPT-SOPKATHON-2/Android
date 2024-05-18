@@ -41,4 +41,5 @@ class ChatListFragment :
         binding.rvChatList.adapter = adapter
         adapter.setFriendList(chatListViewModel.mockFriendInfoLists)
     }
+
 }

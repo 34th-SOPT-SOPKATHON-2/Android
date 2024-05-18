@@ -1,6 +1,8 @@
 package com.sopt.now.sopkathon.android.data.remote.service
 
 import com.sopt.now.sopkathon.android.data.remote.request.QuestionResponse
+
+import com.sopt.now.sopkathon.android.data.remote.response.ChatResponse
 import com.sopt.now.sopkathon.android.data.remote.request.SetNicknameRequest
 import com.sopt.now.sopkathon.android.data.remote.response.MyInfoResponse
 import com.sopt.now.sopkathon.android.data.remote.response.SetNicknameResponse
