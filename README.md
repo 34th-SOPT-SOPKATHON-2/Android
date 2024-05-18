@@ -10,7 +10,7 @@
 |<img src="https://avatars.githubusercontent.com/u/127238018?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/128459613?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/75840431?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/112953135?v=4" width="150" />| 
 |:---------:|:---------:|:---------:|:---------:|
 |[👑최준서](https://github.com/junseo511)|[이유빈](https://github.com/leeeyubin)|[김명석](https://github.com/cacaocoffee)|[이석찬](https://github.com/leeseokchan00)|
-| `네비게이션`</br>`수신자`</br>`푸쉬알림` | `채팅목록`</br>`발신자` | `친구목록`</br>`마이페이지` | `스플래쉬`</br>`회원가입`|
+| `네비게이션`</br>`수신자`</br>`푸쉬알림` | `채팅목록`</br>`발신자`</br>`리드미` | `친구목록`</br>`마이페이지` | `스플래쉬`</br>`회원가입`|
 </br>
 
 ## 💻 Code Convention
