@@ -3,14 +3,16 @@
 </br>
 
 ## 🎉 주요기능
+친구 목록: 보유 중인 친구목록을 확인할 수 있다.
 채팅 기능: 사소한 서운함을 메세지로 주고 받음으로써 해결한다.
+마이페이지: 보유한 뱃지를 포함한 내 정보를 확인할 수 있다.
 </br>
 
 ## 👨‍👩‍👧‍👦 Members
 |<img src="https://avatars.githubusercontent.com/u/127238018?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/128459613?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/75840431?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/112953135?v=4" width="150" />| 
 |:---------:|:---------:|:---------:|:---------:|
 |[👑최준서](https://github.com/junseo511)|[이유빈](https://github.com/leeeyubin)|[김명석](https://github.com/cacaocoffee)|[이석찬](https://github.com/leeseokchan00)|
-| `네비게이션`</br>`수신자`</br>`푸쉬알림` | `채팅목록`</br>`발신자` | `친구목록`</br>`마이페이지` | `스플래쉬`</br>`회원가입`|
+| `네비게이션`</br>`발신자 질문` | `채팅목록`</br>`발신자 채팅`</br>`리드미` | `친구목록`</br>`마이페이지` | `스플래쉬`</br>`회원가입`|
 </br>
 
 ## 💻 Code Convention
@@ -25,7 +27,7 @@
 - chore : 기타 변경사항 (build.gradle, AndroidManifest, .gitignore 등)
 - mod: 간단한 수정사항(코드 리뷰 반영 → 로직이 많이 변경될 시 feat으로 커밋하기)
 - build: 빌드 업무 수정, 패키지 메니저 수정
-</br>
+  </br>
 
 ## 🔖 Branch Strategy
 ```
@@ -44,6 +46,10 @@
 ├─📂ui
 │  ├─📂common
 │  │  └─📂base
+│  ├─📂chatList
+│  ├─📂friendList
+│  ├─📂model
+│  ├─📂mypage
 │  ├─📂naniseo
 └─📂util
 ```
