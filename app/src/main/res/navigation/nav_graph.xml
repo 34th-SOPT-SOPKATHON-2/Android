@@ -67,11 +67,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/fragment_set_nickname"
-        android:name="com.sopt.now.sopkathon.android.ui.setNickname.SetNicknameFragment"
-        android:label="fragment_set_nickname" />
-
-    <fragment
         android:id="@+id/fragment_send_question"
         android:name="com.sopt.now.sopkathon.android.ui.sendQuestion.SendQuestionFragment"
         android:label="fragment_send_question">
