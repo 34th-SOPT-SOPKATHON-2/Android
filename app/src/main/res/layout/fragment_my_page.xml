@@ -1,18 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_my_page_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="My Page"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_my_page_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <TextView
+            android:id="@+id/tv_my_page_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="@string/my_page_title"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/gl_my_page_end"
+            app:layout_constraintStart_toStartOf="@id/gl_my_page_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_my_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="@id/gl_my_page_end"
+            app:layout_constraintStart_toStartOf="@id/gl_my_page_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_my_page_title"
+            app:shapeAppearance="@style/image_circle" />
+
+        <TextView
+            android:id="@+id/tv_my_page_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/gl_my_page_end"
+            app:layout_constraintStart_toStartOf="@id/gl_my_page_start"
+            app:layout_constraintTop_toBottomOf="@id/iv_my_page"
+            tool:text="test" />
+
+        <TextView
+            android:id="@+id/tv_my_page_total_zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="@string/my_page_total_zero"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/gl_my_page_end"
+            app:layout_constraintStart_toStartOf="@id/gl_my_page_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_my_page_name" />
+
+        <TextView
+            android:id="@+id/tv_my_page_tag_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="@string/my_page_total_zero"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/gl_my_page_end"
+            app:layout_constraintStart_toStartOf="@id/gl_my_page_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_my_page_total_zero" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_my_page"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/tv_my_page_tag_title"
+            tool:listitem="@layout/item_my_page" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+

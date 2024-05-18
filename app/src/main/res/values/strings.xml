@@ -14,6 +14,6 @@
 
     <!--myPage-->
     <string name="my_page_title">마이페이지</string>
-    <string name="my_page_total_zero">지금까지 총 0 %d건을 터트리셨어요!</string>
+    <string name="my_page_total_zero">지금까지 총 0을 %d건을 터뜨렸어요!</string>
     <string name="my_page_tag_title">%s님이 가진 태그</string>
 </resources>

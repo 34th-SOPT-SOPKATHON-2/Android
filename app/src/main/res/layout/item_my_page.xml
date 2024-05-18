@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_white_radius_16dp"
+    android:backgroundTint="@color/white"
+    android:elevation="1dp"
+    android:paddingVertical="10dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_my_page_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:padding="5dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/image_circle" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_white_radius_16dp"
+        android:backgroundTint="#DFE0FF"
+        android:elevation="-1dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_my_page_tag"
+        app:layout_constraintEnd_toEndOf="@id/iv_my_page_tag"
+        app:layout_constraintStart_toStartOf="@id/iv_my_page_tag"
+        app:layout_constraintTop_toTopOf="@id/iv_my_page_tag" />
+
+    <TextView
+        android:id="@+id/tv_my_page_tag_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textAppearance="@font/pretendard_semibold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_my_page_tag"
+        app:layout_constraintStart_toEndOf="@id/iv_my_page_tag"
+        app:layout_constraintTop_toTopOf="@id/iv_my_page_tag"
+        tool:text="#태그1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
