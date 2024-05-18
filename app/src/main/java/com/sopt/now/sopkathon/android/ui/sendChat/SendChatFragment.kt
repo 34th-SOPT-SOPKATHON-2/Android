@@ -22,6 +22,7 @@ class SendChatFragment :
 
         showDialog()
         getNickname()
+        showResponse()
     }
 
     private fun getNickname() {
@@ -29,16 +30,29 @@ class SendChatFragment :
     }
 
     private fun showDialog() {
-        deleteDialog = SendChatDialogFragment()
-        deleteDialog?.show(childFragmentManager, deleteDialog?.tag)
-
         viewLifecycleOwner.lifecycleScope.launch {
+            delay(5000)
+
+            deleteDialog = SendChatDialogFragment()
+            deleteDialog?.show(childFragmentManager, deleteDialog?.tag)
+
             repeat(10) { second ->
                 val timeLeft = 10 - second
                 deleteDialog?.updateTimer(timeLeft)
+                if (second == 3) {
+                    deleteDialog?.makeEggInvisible()
+                }
                 delay(1000)
             }
             deleteDialog?.dismiss()
+        }
+    }
+
+    private fun showResponse() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            delay(3000)
+            binding.imgSendGetProfile.visibility = View.VISIBLE
+            binding.tvSendGetText.visibility = View.VISIBLE
         }
     }
 }

@@ -37,4 +37,9 @@ class SendChatDialogFragment :
         view?.findViewById<TextView>(R.id.tv_send_title)?.text = "${secondsLeft}초 뒤에 채팅이 사라져요"
     }
 
+    fun makeEggInvisible() {
+        view?.findViewById<View>(R.id.img_send_main_3)?.visibility = View.VISIBLE
+        view?.findViewById<View>(R.id.img_send_main)?.visibility = View.INVISIBLE
+    }
+
 }

@@ -70,6 +70,12 @@
         android:name="com.sopt.now.sopkathon.android.ui.sendQuestion.SendQuestionFragment"
         android:label="fragment_send_question">
         <argument android:name="nickname" />
+        <action
+            android:id="@+id/action_fragment_send_question_to_fragment_send_chat"
+            app:destination="@id/fragment_send_chat">
+            <argument android:name="question" />
+        </action>
+
     </fragment>
     <fragment
         android:id="@+id/fragment_send_chat"
