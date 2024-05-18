@@ -20,5 +20,6 @@ class SendChatFragment :
     private fun getNickname(){
         val args : ChatListFragmentArgs by navArgs()
 
+
     }
 }
