@@ -36,6 +36,9 @@ class SendChatFragment :
             repeat(10) { second ->
                 val timeLeft = 10 - second
                 deleteDialog?.updateTimer(timeLeft)
+                if (second == 3) { // 3초가 지났을 때
+                    deleteDialog?.makeEggInvisible()
+                }
                 delay(1000)
             }
             deleteDialog?.dismiss()
