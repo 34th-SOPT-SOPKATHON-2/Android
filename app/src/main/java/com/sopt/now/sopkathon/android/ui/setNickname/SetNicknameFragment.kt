@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.sopt.now.sopkathon.android.R
 import com.sopt.now.sopkathon.android.databinding.FragmentSetNicknameBinding
 import com.sopt.now.sopkathon.android.ui.common.base.BindingFragment
@@ -15,22 +16,21 @@ class SetNickNameFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initSetNickNameBtnClickListener()
         observeNickNameEditText()
-        observeInputNickName()
     }
 
     private fun observeNickNameEditText() {
         binding.etSetNicknameInputNickname.doAfterTextChanged {
-            viewmodel.updateNickName(it.toString())
+            if (it.isNullOrEmpty()) {
+                binding.etSetNicknameInputNickname.setTextColor(0xFFFFFF)
+            }
         }
     }
 
-    private fun observeInputNickName() {
-        viewmodel.nickName.observe(viewLifecycleOwner) {
-            if (!viewmodel.checkInvalidNickName()) {
-                binding.viewSetNicknameInputText.setBackgroundColor(0xFFFFFF)
-            }
-
+    private fun initSetNickNameBtnClickListener() {
+        binding.btnSetNickNameFailure.setOnClickListener {
+            findNavController().navigate(R.id.fragment_friend_list)
         }
     }
 }
