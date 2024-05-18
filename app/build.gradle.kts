@@ -39,10 +39,6 @@ android {
         buildConfig = true
         dataBinding = true
         viewBinding = true
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
     }
 }
 
@@ -56,7 +52,6 @@ dependencies {
     // Test
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     // Material
     implementation("com.google.android.material:material:1.11.0")
@@ -93,14 +88,4 @@ dependencies {
     // Coil
     implementation("io.coil-kt:coil:2.6.0")
     implementation("jp.wasabeef.transformers:coil:1.0.6")
-
-    // Compose
-    implementation("androidx.activity:activity-compose:1.9.0")
-    implementation("androidx.compose.ui:ui:1.6.7")
-    implementation("androidx.compose.ui:ui-graphics:1.6.7")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.6.7")
-    implementation("androidx.compose.material3:material3:1.6.7")
-    implementation("androidx.compose.material:material:1.6.7")
-    implementation("androidx.compose.runtime:runtime-livedata:1.6.7")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.7")
 }
