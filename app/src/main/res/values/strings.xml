@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Sopkathon34th</string>
+    <string name="app_name">난이서</string>
+    <string name="menu_friend_list">친구</string>
+    <string name="menu_chat_list">채팅</string>
+    <string name="menu_my_page">내정보</string>
 </resources>
