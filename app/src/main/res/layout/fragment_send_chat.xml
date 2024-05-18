@@ -13,7 +13,7 @@
             android:layout_height="54dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="29dp"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/ic_send_profile"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearance="@style/image_circle" />
@@ -23,47 +23,72 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/iv_send_profile"
             app:layout_constraintStart_toEndOf="@id/iv_send_profile"
             app:layout_constraintTop_toTopOf="@id/iv_send_profile"
-            tools:text="닉네임임" />
+            tools:text="넌이서" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/img_send_profile"
-            android:layout_width="80dp"
-            android:layout_height="44dp"
-            android:layout_marginEnd="20dp"
-            android:src="@drawable/ic_launcher_background"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/shape_send_chat_btn_10"
+            android:backgroundTint="#F6F5F1"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_send_nickname" />
-
-        <TextView
-            android:id="@+id/tv_send_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_send_profile"
-            tools:text="너가 그때 내 카톡 읽씹했잖아..서운해" />
-
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/img_send_get_profile"
-            android:layout_width="80dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="20dp"
-            android:src="@drawable/ic_launcher_background"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_send_text" />
+            app:layout_constraintTop_toBottomOf="@id/iv_send_profile">
 
-        <TextView
-            android:id="@+id/tv_send_get_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_send_get_profile"
-            tools:text="미안해 내가 조심할게!!!" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_send_profile"
+                android:layout_width="80dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_send_sender_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_send_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_send_sender_text"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_send_profile"
+                tools:text="너가 그때 내 카톡 읽씹했잖아..서운해" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_send_get_profile"
+                android:layout_width="80dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_send_receiver_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_send_text" />
+
+            <TextView
+                android:id="@+id/tv_send_get_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-10dp"
+                android:background="@drawable/ic_send_receiver_text"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_send_get_profile"
+                tools:text="미안해 내가 조심할게!!!" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
