@@ -1,29 +1,33 @@
 package com.sopt.now.sopkathon.android.ui.friendList
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.sopt.now.sopkathon.android.data.ServicePool
+import com.sopt.now.sopkathon.android.data.remote.response.Friends
+import kotlinx.coroutines.launch
 
 class FriendListViewModel : ViewModel() {
-    private val _friend = MutableLiveData<List<Friend>>()
-    val friend: LiveData<List<Friend>> get() = _friend
+    private val _friend = MutableLiveData<List<Friends>>()
+    val friend: LiveData<List<Friends>> get() = _friend
 
     init {
-        _friend.value = listOf(
-            Friend(1, "test1", 0,""),
-            Friend(1, "test2", 0,""),
-            Friend(1, "test3", 0,""),
-            Friend(1, "test4", 0,""),
-        )
+
+
     }
 
-    fun getInfo(userId : Int){
-        viewModelScope.runCatching {
-//            ServicePool.naniseoService.getFriendInfo(userId)
-        }.onSuccess {
-
-        }.onFailure {  }
+    fun getInfo(userId: Int) {
+        viewModelScope.launch {
+            runCatching {
+                ServicePool.naniseoService.getFriendList(userId)
+            }.onSuccess {
+                _friend.value = it.body()?.data
+            }.onFailure {
+                Log.e("SplashViewModel", "postLogin Error: ${it.message}")
+            }
+        }
     }
-
 }
+

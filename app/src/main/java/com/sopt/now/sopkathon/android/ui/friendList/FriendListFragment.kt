@@ -6,7 +6,6 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sopt.now.sopkathon.android.R
 import com.sopt.now.sopkathon.android.databinding.FragmentFriendListBinding
-import com.sopt.now.sopkathon.android.databinding.FragmentSetNicknameBinding
 import com.sopt.now.sopkathon.android.ui.common.base.BindingFragment
 
 class FriendListFragment :
@@ -17,6 +16,9 @@ class FriendListFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initAdapter()
+
+        friendListViewModel.getInfo(1)
+
     }
 
     private fun initAdapter() {
@@ -31,5 +33,7 @@ class FriendListFragment :
             friendListAdapter.submitList(it)
         }
     }
+
+
 
 }

@@ -52,7 +52,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="62dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_friend_profile">
 
@@ -61,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_white_radius_10dp"
-            android:backgroundTint="@color/material_dynamic_neutral80"
+            android:backgroundTint="#D9D9D9"
             android:fontFamily="@font/pretendard_medium"
             android:padding="10dp"
             android:text="test"
