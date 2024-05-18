@@ -52,6 +52,13 @@ class SendQuestionFragment :
         }
     }
 
+    private fun observeSelectedQuestion() {
+        viewModel.selectedQuestion.observe(viewLifecycleOwner) { question ->
+            if (!question.isNullOrEmpty()) {
+            }
+        }
+    }
+
     private fun getNickname() {
         val args: ChatListFragmentArgs by navArgs()
     }

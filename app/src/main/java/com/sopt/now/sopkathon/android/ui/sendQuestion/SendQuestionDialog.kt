@@ -30,7 +30,9 @@ class SendQuestionDialog : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupDialogAppearance()
-        binding.tvBottomSheetTitle.text = viewModel.selectedCategory.value
+        setupText()
+        viewModel.getQuestions()
+        setupBtns()
     }
 
     private fun setupDialogAppearance() {
@@ -39,6 +41,30 @@ class SendQuestionDialog : DialogFragment() {
             setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             attributes?.windowAnimations = R.style.BottomSheetDialogAnimation
             setGravity(Gravity.BOTTOM)
+        }
+    }
+
+    private fun setupText() {
+        binding.tvBottomSheetTitle.text = viewModel.selectedCategory.value
+        viewModel.questions.observe(viewLifecycleOwner){
+            binding.tvBottomSheetFirst.text = it[0]
+            binding.tvBottomSheetSecond.text = it[1]
+            binding.tvBottomSheetThird.text = it[2]
+        }
+    }
+
+    private fun setupBtns() {
+        binding.tvBottomSheetFirst.setOnClickListener {
+            viewModel.setQuestion(binding.tvBottomSheetFirst.text.toString())
+            dismiss()
+        }
+        binding.tvBottomSheetSecond.setOnClickListener {
+            viewModel.setQuestion(binding.tvBottomSheetSecond.text.toString())
+            dismiss()
+        }
+        binding.tvBottomSheetThird.setOnClickListener {
+            viewModel.setQuestion(binding.tvBottomSheetThird.text.toString())
+            dismiss()
         }
     }
 
