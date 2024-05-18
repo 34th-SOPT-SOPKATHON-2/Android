@@ -11,6 +11,8 @@ class ChatListAdapter(
     private val itemChatClick: (FriendModel) -> Unit
 ) : ListAdapter<FriendModel, ChatListViewHolder>(diffUtil) {
 
+    private var friendList: List<FriendModel> = emptyList()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatListViewHolder {
         val inflater by lazy { LayoutInflater.from(parent.context) }
         val binding: ItemChatListBinding =
@@ -23,7 +25,13 @@ class ChatListAdapter(
     }
 
     override fun onBindViewHolder(holder: ChatListViewHolder, position: Int) {
-        holder.onBind(getItem(position))
+        holder.onBind(friendList[position])
+    }
+
+    override fun getItemCount() = friendList.size
+    fun setFriendList(friendList: List<FriendModel>) {
+        this.friendList = friendList.toList()
+        notifyDataSetChanged()
     }
 
     companion object {

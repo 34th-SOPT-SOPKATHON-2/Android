@@ -1,6 +1,7 @@
 package com.sopt.now.sopkathon.android.ui.chatList
 
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.sopt.now.sopkathon.android.data.remote.response.FriendModel
 import com.sopt.now.sopkathon.android.databinding.ItemChatListBinding
 
@@ -11,7 +12,7 @@ class ChatListViewHolder(
 
     fun onBind(item: FriendModel) {
         with(binding) {
-            imgChatProfile.id = item.image
+            imgChatProfile.load(item.image)
             tvChatNickname.text = item.nickname
             tvChatSub.text = item.sub
 
