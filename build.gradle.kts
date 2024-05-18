@@ -5,3 +5,11 @@ plugins {
     id("org.jetbrains.kotlin.jvm") version "1.9.0" apply false
     id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0" apply false
 }
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.7")
+    }
+}

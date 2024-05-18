@@ -1,8 +1,11 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0"
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -17,6 +20,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "BASE_URL", getApiKey("base.url"))
     }
 
     buildTypes {
@@ -95,4 +99,8 @@ dependencies {
 
     // Socket
     implementation("io.socket:socket.io-client:2.1.0")
+}
+
+fun getApiKey(propertyKey: String): String {
+    return gradleLocalProperties(rootDir).getProperty(propertyKey)
 }

@@ -45,6 +45,10 @@
         <action
             android:id="@+id/action_fragment_chat_list_to_fragment_my_page"
             app:destination="@id/fragment_my_page" />
+        <action
+            android:id="@+id/action_fragment_chat_list_to_sendQuestionFragment"
+            app:destination="@id/fragment_send_question" />
+        <argument android:name="nickname" />
     </fragment>
 
     <fragment
@@ -58,5 +62,17 @@
         <action
             android:id="@+id/action_fragment_my_page_to_fragment_chat_list"
             app:destination="@id/fragment_chat_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_set_nickname"
+        android:name="com.sopt.now.sopkathon.android.ui.setNickname.SetNicknameFragment"
+        android:label="fragment_set_nickname" />
+
+    <fragment
+        android:id="@+id/fragment_send_question"
+        android:name="com.sopt.now.sopkathon.android.ui.sendQuestion.SendQuestionFragment"
+        android:label="fragment_send_question">
+        <argument android:name="nickname" />
     </fragment>
 </navigation>
