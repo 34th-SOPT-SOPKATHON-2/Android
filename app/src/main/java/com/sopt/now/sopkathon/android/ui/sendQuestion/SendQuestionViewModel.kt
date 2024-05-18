@@ -12,4 +12,8 @@ class SendQuestionViewModel : ViewModel() {
     fun setCategory(selected: String) {
         _selectedCategory.value = selected
     }
+
+    fun getQuestions(){
+
+    }
 }
