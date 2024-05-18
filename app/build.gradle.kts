@@ -92,4 +92,7 @@ dependencies {
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+
+    // Socket
+    implementation("io.socket:socket.io-client:2.1.0")
 }
