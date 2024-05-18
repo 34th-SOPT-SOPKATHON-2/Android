@@ -1,9 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_set_nickname_input_nickname_fir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="활동할 "
+            android:textColor="#3F3F3F"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_set_nickname_input_nickname_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="닉네임"
+            android:textColor="#3F3F3F"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tv_set_nickname_input_nickname_fir"
+            app:layout_constraintTop_toTopOf="@id/tv_set_nickname_input_nickname_fir" />
+
+        <TextView
+            android:id="@+id/tv_set_nickname_input_nickname_thr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="을 입력해주세요"
+            android:textColor="#3F3F3F"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/tv_set_nickname_input_nickname_sec"
+            app:layout_constraintTop_toTopOf="@id/tv_set_nickname_input_nickname_sec" />
+
+        <View
+            android:id="@+id/view_set_nickname_input_text"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="21dp"
+            android:background="#E4E4E4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_set_nickname_input_nickname_fir"
+            app:layout_constraintTop_toBottomOf="@id/tv_set_nickname_input_nickname_fir" />
+
+
+        <EditText
+            android:id="@+id/et_set_nickname_input_nickname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:background="@null"
+            android:fontFamily="@font/pretendard_medium"
+            android:hint="닉네임을 입력해주세요."
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="#C8C8C8"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_set_nickname_input_text"
+            app:layout_constraintEnd_toEndOf="@id/view_set_nickname_input_text"
+            app:layout_constraintStart_toStartOf="@id/view_set_nickname_input_text"
+            app:layout_constraintTop_toTopOf="@id/view_set_nickname_input_text" />
+
+        <LinearLayout
+            android:id="@+id/ll_set_nickname_error_invalid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/view_set_nickname_input_text"
+            app:layout_constraintTop_toBottomOf="@id/view_set_nickname_input_text">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/img_set_nickname_error" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="한글과 영어로만 닉네임을 생성할 수 있습니다."
+                android:textColor="#E64A35"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_set_nickname_error_same"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/view_set_nickname_input_text"
+            app:layout_constraintTop_toBottomOf="@id/view_set_nickname_input_text">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/img_set_nickname_error" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pretendard_regular"
+                android:text="한글과 영어로만 닉네임을 생성할 수 있습니다."
+                android:textColor="#E64A35"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_set_nickname_character"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="184dp"
+            android:layout_marginBottom="102dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_set_nickname_character2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/view_set_nickname_input_text"
+            app:layout_constraintStart_toStartOf="@id/view_set_nickname_input_text"
+            app:layout_constraintTop_toBottomOf="@id/view_set_nickname_input_text" />
+
+        <Button
+            android:id="@+id/btn_set_nick_name_success"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4D55F5"
+            android:fontFamily="@font/pretendard_medium"
+            android:paddingVertical="14dp"
+            android:text="다음"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/et_set_nickname_input_nickname"
+            app:layout_constraintStart_toStartOf="@id/et_set_nickname_input_nickname"
+            app:layout_constraintTop_toBottomOf="@id/iv_set_nickname_character" />
+
+        <Button
+            android:id="@+id/btn_set_nick_name_failure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A0A0A0"
+            android:fontFamily="@font/pretendard_medium"
+            android:paddingVertical="14dp"
+            android:text="다음"
+            android:textSize="18sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/et_set_nickname_input_nickname"
+            app:layout_constraintStart_toStartOf="@id/et_set_nickname_input_nickname"
+            app:layout_constraintTop_toBottomOf="@id/iv_set_nickname_character" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

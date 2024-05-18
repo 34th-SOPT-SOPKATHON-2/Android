@@ -9,8 +9,18 @@
         android:name="com.sopt.now.sopkathon.android.ui.splash.SplashFragment"
         android:label="fragment_splash:">
         <action
-            android:id="@+id/action_fragment_splash_to_fragment_friend_list"
-            app:destination="@id/fragment_friend_list" />
+            android:id="@+id/action_fragment_splash_to_fragment_set_nickname"
+            app:destination="@id/fragment_set_nickname"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_set_nickname"
+        android:name="com.sopt.now.sopkathon.android.ui.setNickName.SetNickNameFragment"
+        android:label="fragment_set_nickname">
+        <action
+            android:id="@+id/action_fragment_set_nickname_to_fragment_friend_list"
+            app:destination="@id/fragment_friend_list"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/fragment_friend_list"
