@@ -1,16 +1,16 @@
-## 📱 난0ㅣ서
-나는 이런 게 서운해 
+## 📱 난이서
+인간관계의 사소한 서운함이 터지기 전에 0으로 만들자!
 </br>
 
 ## 🎉 주요기능
-채팅 앱 give and take
+채팅 기능: 사소한 서운함을 채팅을 주고 받음으로써 해결한다.
 </br>
 
 ## 👨‍👩‍👧‍👦 Members
 |<img src="https://avatars.githubusercontent.com/u/127238018?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/128459613?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/75840431?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/112953135?v=4" width="150" />| 
 |:---------:|:---------:|:---------:|:---------:|
 |[👑최준서](https://github.com/junseo511)|[이유빈](https://github.com/leeeyubin)|[김명석](https://github.com/cacaocoffee)|[이석찬](https://github.com/leeseokchan00)|
-| `미정` | `미정` | `미정` | `미정`|
+| `navigation` | `미정` | `미정` | `미정`|
 </br>
 
 ## 💻 Code Convention
@@ -23,12 +23,12 @@
 - rename : 파일이나 폴더명을 수정하거나 이동
 - remove : 필요없는 파일, 코드를 삭제
 - chore : 기타 변경사항 (build.gradle, AndroidManifest, .gitignore 등)
-- mod: 간단한 수정사항(코드 리뷰 반영 → 로직이 많이 변경될 시 Feat으로 커밋하기)
+- mod: 간단한 수정사항(코드 리뷰 반영 → 로직이 많이 변경될 시 feat으로 커밋하기)
 </br>
 
 ## 🔖 Branch Strategy
 ```
-(작업 유형} / {작업 내용}
+{작업 유형} / {작업 내용}
 ```
 </br>
 
@@ -42,6 +42,7 @@
 |  |  └─📂service
 ├─📂ui
 │  ├─📂common
+│  │  └─📂base
 │  ├─📂naniseo
 └─📂util
 ```
