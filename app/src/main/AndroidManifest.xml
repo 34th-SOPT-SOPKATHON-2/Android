@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Sopkathon34th"
         tools:targetApi="31">
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".ui.naniseo.NaniseoActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
