@@ -1,16 +1,15 @@
-package com.sopt.now.sopkathon.android.ui.sendquestion
+package com.sopt.now.sopkathon.android.ui.sendChat
 
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.navArgs
 import com.sopt.now.sopkathon.android.R
-import com.sopt.now.sopkathon.android.databinding.FragmentSendQuestionBinding
+import com.sopt.now.sopkathon.android.databinding.FragmentSendChatBinding
 import com.sopt.now.sopkathon.android.ui.chatList.ChatListFragmentArgs
 import com.sopt.now.sopkathon.android.ui.common.base.BindingFragment
 
-
-class SendQuestionFragment :
-    BindingFragment<FragmentSendQuestionBinding>(R.layout.fragment_send_question) {
+class SendChatFragment :
+    BindingFragment<FragmentSendChatBinding>(R.layout.fragment_send_chat) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

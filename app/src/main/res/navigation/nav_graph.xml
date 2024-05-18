@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fragment_friend_list">
+    app:startDestination="@id/fragment_splash">
 
     <fragment
         android:id="@+id/fragment_splash"
@@ -29,6 +28,7 @@
         android:id="@+id/fragment_chat_list"
         android:name="com.sopt.now.sopkathon.android.ui.chatList.ChatListFragment"
         android:label="fragment_chat_list">
+
         <action
             android:id="@+id/action_fragment_chat_list_to_fragment_friend_list"
             app:destination="@id/fragment_friend_list" />
@@ -37,7 +37,7 @@
             app:destination="@id/fragment_my_page" />
         <action
             android:id="@+id/action_fragment_chat_list_to_sendQuestionFragment"
-            app:destination="@id/sendQuestionFragment" />
+            app:destination="@id/fragment_send_question" />
         <argument android:name="nickname" />
     </fragment>
 
@@ -53,12 +53,16 @@
             android:id="@+id/action_fragment_my_page_to_fragment_chat_list"
             app:destination="@id/fragment_chat_list" />
     </fragment>
+
     <fragment
-        android:id="@+id/sendQuestionFragment"
-        android:name="com.sopt.now.sopkathon.android.ui.sendquestion.SendQuestionFragment"
-        android:label="fragment_send_question"
-        tools:layout="@layout/fragment_send_question">
+        android:id="@+id/fragment_set_nickname"
+        android:name="com.sopt.now.sopkathon.android.ui.setNickname.SetNicknameFragment"
+        android:label="fragment_set_nickname" />
+
+    <fragment
+        android:id="@+id/fragment_send_question"
+        android:name="com.sopt.now.sopkathon.android.ui.sendQuestion.SendQuestionFragment"
+        android:label="fragment_send_question">
         <argument android:name="nickname" />
     </fragment>
-
 </navigation>
