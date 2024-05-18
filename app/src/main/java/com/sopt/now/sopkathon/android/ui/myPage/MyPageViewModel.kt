@@ -1,21 +1,23 @@
 package com.sopt.now.sopkathon.android.ui.myPage
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.sopt.now.sopkathon.android.R
+import com.sopt.now.sopkathon.android.data.ServicePool
+import com.sopt.now.sopkathon.android.data.remote.response.MyInfoResponse
+import kotlinx.coroutines.launch
 
 class MyPageViewModel : ViewModel() {
-    private val _profile = MutableLiveData<MyPage>()
-    val profile: LiveData<MyPage> get() = _profile
+    private val _profile = MutableLiveData<MyInfoResponse.Data>()
+    val profile: LiveData<MyInfoResponse.Data> get() = _profile
 
     private val _badge = MutableLiveData<List<Badge>>()
     val badge: LiveData<List<Badge>> get() = _badge
 
     init {
-
-        _profile.value = MyPage("명석")
-
         _badge.value = listOf(
             Badge(
                 "프로지각해결사",
@@ -27,11 +29,19 @@ class MyPageViewModel : ViewModel() {
             Badge("프로축하해결사", R.drawable.ic_present)
         )
     }
-}
 
-data class MyPage(
-    val name: String
-)
+    fun updateProfile() {
+        viewModelScope.launch {
+            runCatching {
+                ServicePool.naniseoService.getMyInfo(1)
+            }.onSuccess {
+                _profile.value = it.body()?.data
+            }.onFailure {
+                Log.e("SplashViewModel", "postLogin Error: ${it.message}")
+            }
+        }
+    }
+}
 
 data class Badge(
     val name: String,

@@ -1,9 +1,11 @@
 package com.sopt.now.sopkathon.android.ui.myPage
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import coil.load
 import com.sopt.now.sopkathon.android.R
 import com.sopt.now.sopkathon.android.databinding.FragmentMyPageBinding
 import com.sopt.now.sopkathon.android.ui.common.base.BindingFragment
@@ -15,10 +17,16 @@ class MyPageFragment : BindingFragment<FragmentMyPageBinding>(R.layout.fragment_
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initAdapter()
-        binding.tvMyPageName.text = myPageViewModel.profile.value?.name
-        binding.tvMyPageTagTitle.text =
-            getString(R.string.my_page_tag_title).format(myPageViewModel.profile.value?.name)
-        binding.tvMyPageTotalZero.text= getString(R.string.my_page_total_zero).format(150)
+        myPageViewModel.updateProfile()
+
+        myPageViewModel.profile.observe(viewLifecycleOwner) {
+            Log.d("MyPageFragmentTest", "profile: $it")
+            binding.tvMyPageName.text = it.nickName
+            binding.tvMyPageTagTitle.text =
+                getString(R.string.my_page_tag_title, it.nickName)
+            binding.tvMyPageTotalZero.text =
+                getString(R.string.my_page_total_zero, it.totalZeroCount)
+        }
     }
 
     private fun initAdapter() {
