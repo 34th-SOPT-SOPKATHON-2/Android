@@ -5,28 +5,39 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#B3B3B3"
+        android:background="@color/white"
         android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/tv_send_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:text="우리 사이 서운함이 0이 되었어요!"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_send_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="43dp"
             android:gravity="center"
             android:text="10초 뒤에 채팅이 사라져요"
             android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/tv_send_main_title" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/img_send_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="19dp"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/ic_send_egg_10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_send_title" />
@@ -38,7 +49,7 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/shape_send_chat_btn_10"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="#4D55F5"
             android:text="바로 터뜨리기"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
