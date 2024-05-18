@@ -8,12 +8,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.activityViewModels
 import com.sopt.now.sopkathon.android.R
 import com.sopt.now.sopkathon.android.databinding.DialogSendQuestionBinding
 
 class SendQuestionDialog : DialogFragment() {
     private var _binding: DialogSendQuestionBinding? = null
     private val binding: DialogSendQuestionBinding get() = requireNotNull(_binding)
+
+    private val viewModel: SendQuestionViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,6 +30,7 @@ class SendQuestionDialog : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupDialogAppearance()
+        binding.tvBottomSheetTitle.text = viewModel.selectedCategory.value
     }
 
     private fun setupDialogAppearance() {

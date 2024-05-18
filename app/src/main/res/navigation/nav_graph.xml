@@ -37,7 +37,7 @@
             app:destination="@id/fragment_my_page" />
         <action
             android:id="@+id/action_fragment_chat_list_to_sendQuestionFragment"
-            app:destination="@id/sendQuestionFragment" />
+            app:destination="@id/fragment_send_question" />
         <argument android:name="nickname" />
     </fragment>
 

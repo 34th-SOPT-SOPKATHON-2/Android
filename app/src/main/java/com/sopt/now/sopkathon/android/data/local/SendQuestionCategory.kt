@@ -3,40 +3,33 @@ package com.sopt.now.sopkathon.android.data.local
 import com.sopt.now.sopkathon.android.R
 
 data class SendQuestionCategory(
-    val id: Int,
     val category: String,
     val icon: Int,
 ) {
     companion object {
         val sendQuestionCategories = listOf(
             SendQuestionCategory(
-                0,
-                "Test1",
+                "말투",
                 R.drawable.ic_send_dummy
             ),
             SendQuestionCategory(
-                0,
-                "Test2",
+                "정산",
                 R.drawable.ic_send_dummy
             ),
             SendQuestionCategory(
-                0,
-                "Test3",
+                "(안)읽씹",
                 R.drawable.ic_send_dummy
             ),
             SendQuestionCategory(
-                0,
-                "Test4",
+                "약속",
                 R.drawable.ic_send_dummy
             ),
             SendQuestionCategory(
-                0,
-                "Test5",
+                "축하",
                 R.drawable.ic_send_dummy
             ),
             SendQuestionCategory(
-                0,
-                "Test6",
+                "지각",
                 R.drawable.ic_send_dummy
             ),
         )

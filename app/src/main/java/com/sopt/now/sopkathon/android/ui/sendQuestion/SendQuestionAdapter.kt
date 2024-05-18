@@ -10,7 +10,7 @@ import com.sopt.now.sopkathon.android.data.local.SendQuestionCategory
 import com.sopt.now.sopkathon.android.databinding.ItemSendQuestionBinding
 import com.sopt.now.sopkathon.android.util.view.ItemDiffCallback
 
-class SendQuestionAdapter :
+class SendQuestionAdapter(private val onClick: (String) -> (Unit)) :
     ListAdapter<SendQuestionCategory, SendQuestionAdapter.SendQuestionViewHolder>(
         ItemDiffCallback<SendQuestionCategory>(
             onItemsTheSame = { old, new -> old == new },
@@ -18,7 +18,10 @@ class SendQuestionAdapter :
         )
     ) {
 
-    class SendQuestionViewHolder(private val binding: ItemSendQuestionBinding) :
+    class SendQuestionViewHolder(
+        private val binding: ItemSendQuestionBinding,
+        private val onClick: (String) -> Unit
+    ) :
         ViewHolder(binding.root) {
         fun bind(item: SendQuestionCategory) {
             binding.apply {
@@ -27,6 +30,10 @@ class SendQuestionAdapter :
                     transformations(CircleCropTransformation())
                 }
                 tvSendQuestionItem.text = item.category
+
+                root.setOnClickListener {
+                    onClick(item.category)
+                }
             }
         }
     }
@@ -34,7 +41,7 @@ class SendQuestionAdapter :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SendQuestionViewHolder {
         val binding =
             ItemSendQuestionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return SendQuestionViewHolder(binding)
+        return SendQuestionViewHolder(binding, onClick)
     }
 
     override fun onBindViewHolder(holder: SendQuestionViewHolder, position: Int) {
