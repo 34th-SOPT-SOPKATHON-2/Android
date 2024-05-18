@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0"
+    id("androidx.navigation.safeargs")
 }
 
 android {
