@@ -53,5 +53,5 @@
     <fragment
         android:id="@+id/fragment_set_nickname"
         android:name="com.sopt.now.sopkathon.android.ui.setNickname.SetNicknameFragment"
-        android:label="fragment_set_nickname">
+        android:label="fragment_set_nickname"/>
 </navigation>
