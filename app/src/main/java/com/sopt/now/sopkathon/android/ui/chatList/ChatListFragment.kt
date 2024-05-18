@@ -2,6 +2,7 @@ package com.sopt.now.sopkathon.android.ui.chatList
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import com.sopt.now.sopkathon.android.R
 import com.sopt.now.sopkathon.android.databinding.FragmentChatListBinding
 import com.sopt.now.sopkathon.android.ui.common.base.BindingFragment
@@ -20,13 +21,14 @@ class ChatListFragment :
 
     private fun initAdapterWithClickListener() {
         _adapter = ChatListAdapter { friendModel ->
-            friendModel.nickname
+            val nickname = friendModel.nickname
             if (friendModel.isList) {
-
+                val action =
+                    ChatListFragmentDirections.actionFragmentChatListToSendQuestionFragment(nickname)
+                findNavController().navigate(action)
             } else {
-
+//                val action =
             }
-
         }
         binding.rvChatList.adapter = adapter
     }
