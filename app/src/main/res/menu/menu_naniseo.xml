@@ -3,17 +3,16 @@
 
     <item
         android:id="@+id/fragment_friend_list"
-        android:icon="@drawable/ic_menu_dummy"
+        android:icon="@drawable/ic_bot_nav_friend"
         android:title="@string/menu_friend_list" />
 
     <item
         android:id="@+id/fragment_chat_list"
-        android:icon="@drawable/ic_menu_dummy"
+        android:icon="@drawable/ic_bot_nav_chat"
         android:title="@string/menu_chat_list" />
-
 
     <item
         android:id="@+id/fragment_my_page"
-        android:icon="@drawable/ic_menu_dummy"
+        android:icon="@drawable/ic_bot_nav_my_page"
         android:title="@string/menu_my_page" />
 </menu>

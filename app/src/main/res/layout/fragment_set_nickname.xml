@@ -135,30 +135,16 @@
             app:layout_constraintTop_toBottomOf="@id/view_set_nickname_input_text" />
 
         <Button
-            android:id="@+id/btn_set_nick_name_success"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_gray_radius_14"
-            android:fontFamily="@font/pretendard_medium"
-            android:paddingVertical="14dp"
-            android:text="다음"
-            android:textSize="18sp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/et_set_nickname_input_nickname"
-            app:layout_constraintStart_toStartOf="@id/et_set_nickname_input_nickname"
-            app:layout_constraintTop_toBottomOf="@id/iv_set_nickname_character" />
-
-        <Button
             android:id="@+id/btn_set_nick_name_failure"
+            style="@style/Theme.CustomButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_gray_radius_14"
+            android:src="@drawable/bg_gray_radius_14"
+            android:backgroundTint="#4D55F5"
             android:fontFamily="@font/pretendard_medium"
             android:paddingVertical="14dp"
             android:text="다음"
             android:textSize="18sp"
-            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/et_set_nickname_input_nickname"
             app:layout_constraintStart_toStartOf="@id/et_set_nickname_input_nickname"

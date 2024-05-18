@@ -1,10 +1,15 @@
 package com.sopt.now.sopkathon.android.data.remote.service
 
 import com.sopt.now.sopkathon.android.data.remote.request.QuestionResponse
+
 import com.sopt.now.sopkathon.android.data.remote.response.ChatResponse
+import com.sopt.now.sopkathon.android.data.remote.request.SetNicknameRequest
 import com.sopt.now.sopkathon.android.data.remote.response.MyInfoResponse
+import com.sopt.now.sopkathon.android.data.remote.response.SetNicknameResponse
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.PUT
 import retrofit2.http.Path
 
 interface NaniseoService {
@@ -18,9 +23,9 @@ interface NaniseoService {
         @Path("memberId") memberId: Int
     ): Response<MyInfoResponse>
 
-    @GET("api/v1/chat-list")
-    suspend fun getChatInfo(
-        @Path("memberId") memberId: Int
-    ): Response<ChatResponse>
-
+    @PUT("mypage/{memberId}")
+    suspend fun setNickname(
+        @Path("memberId") memberId: Int,
+        @Body request: SetNicknameRequest
+    ): Response<SetNicknameResponse>
 }
