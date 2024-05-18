@@ -20,7 +20,7 @@ class SplashFragment : BindingFragment<FragmentSplashBinding>(R.layout.fragment_
 
             lifecycleScope.launch {
                 delay(2000)
-                findNavController().navigate(R.id.fragment_friend_list)
+                findNavController().navigate(R.id.fragment_set_nickname)
             }
     }
 
