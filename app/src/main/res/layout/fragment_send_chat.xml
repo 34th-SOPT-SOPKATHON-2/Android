@@ -62,7 +62,7 @@
                 android:paddingVertical="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img_send_profile"
-                tools:text="너가 그때 내 카톡 읽씹했잖아..서운해" />
+                android:text="너가 그때 내 카톡 읽씹했잖아..서운해" />
 
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -70,6 +70,7 @@
                 android:layout_width="80dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="20dp"
+                android:visibility="gone"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/ic_send_receiver_icon"
                 app:layout_constraintStart_toStartOf="parent"
@@ -83,10 +84,11 @@
                 android:layout_marginTop="-10dp"
                 android:background="@drawable/ic_send_receiver_text"
                 android:paddingHorizontal="20dp"
+                android:visibility="gone"
                 android:paddingVertical="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img_send_get_profile"
-                tools:text="미안해 내가 조심할게!!!" />
+                android:text="미안해 내가 조심할게!!!" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
