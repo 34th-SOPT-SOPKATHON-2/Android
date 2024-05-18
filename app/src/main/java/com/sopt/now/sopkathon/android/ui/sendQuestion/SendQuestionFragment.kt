@@ -1,8 +1,11 @@
 package com.sopt.now.sopkathon.android.ui.sendQuestion
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import androidx.compose.material3.Snackbar
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.sopt.now.sopkathon.android.R
 import com.sopt.now.sopkathon.android.data.local.SendQuestionCategory
@@ -24,6 +27,7 @@ class SendQuestionFragment :
         loadQuestions()
         setupBottomSheet()
         getNickname()
+        observeSelectedQuestion()
     }
 
     private fun setupRecyclerView() {
@@ -54,7 +58,13 @@ class SendQuestionFragment :
 
     private fun observeSelectedQuestion() {
         viewModel.selectedQuestion.observe(viewLifecycleOwner) { question ->
+            Log.e("SendQuestionFragmentTest", "question: $question")
             if (!question.isNullOrEmpty()) {
+                val action =
+                    SendQuestionFragmentDirections.actionFragmentSendQuestionToFragmentSendChat(
+                        question
+                    )
+                findNavController().navigate(action)
             }
         }
     }
