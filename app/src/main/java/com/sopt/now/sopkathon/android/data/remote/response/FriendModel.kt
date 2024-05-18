@@ -2,6 +2,7 @@ package com.sopt.now.sopkathon.android.data.remote.response
 
 data class FriendModel(
     val image: Int,
-    val title: String,
-    val sub: String
+    val nickname: String,
+    val sub: String,
+    val isList : Boolean
 )

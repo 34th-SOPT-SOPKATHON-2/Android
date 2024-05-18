@@ -16,7 +16,7 @@
         app:shapeAppearance="@style/image_circle" />
 
     <TextView
-        android:id="@+id/tv_chat_title"
+        android:id="@+id/tv_chat_nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
