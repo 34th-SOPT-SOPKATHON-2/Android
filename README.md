@@ -61,5 +61,5 @@
 |<img src="https://github.com/34th-SOPT-SOPKATHON-2/Android/assets/128459613/a95423d5-3cbe-4c77-b5b9-72756a11c239" width="500" />|<img src="https://github.com/34th-SOPT-SOPKATHON-2/Android/assets/127238018/7e26aab3-9df0-49e0-8fec-6fc245f1919b" width="500" />|
 
 ## 🎬 시연영상
+https://github.com/34th-SOPT-SOPKATHON-2/Android/assets/128459613/a950a43a-600b-4ab3-a939-b878cb7d3826
 
-https://github.com/34th-SOPT-SOPKATHON-2/Android/assets/127238018/d36b8ce3-312d-4dbd-89b3-98a83c28d55f
